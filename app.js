@@ -39,10 +39,21 @@ move('x',3);
 move('x',3);
 move('x',3);
 
+// Notes to the XO project
+
 // pick 'o' or 'x' for CPU randomise pick and Player get the other option - at init stage
 // refactor to pick 'o' or 'x' allocated to a given side of match not to fix i.e. 'o' to Player, 'x' to CPU
 // init Player, CPU objects? i.e. CPU chosen sign 'o', number of cpuWins, 
 
+// Array when initialised => An example how it will look like after 2 moves
+// [false, false, false]   => ['o', false, false]
+// [false, false, false]      [false, 'x', false]
+// [false, false, false]      [false, false, false]
+
+// Index in array
+// [0,1,2]
+// [3,4,5]
+// [6,7,8] 
 // winningOptions = ['012', '345', '678', '036', '147', '258', '048', '246']
 
 /*
@@ -77,5 +88,32 @@ if CPU starts => randomise first move i.e [2]
 
     CPU wins first move
         randomise 0,1 => 0 => 'o' option from table => set cpu.tick = [randomisedNumber]; options.pop(); set player.tick = options[0]; restart options table - can be sepearate initOX();
+
+
+Look into max 10 games => if cpuWins 3 & playerWins 2 games 
+    if(cpuWins > playerWins) { 
+        winner = 'cpu'
+    } else if(playerWins > cpuWins) {
+        winner = 'player'
+    } else {
+        winner = 'DRAW!'
+    }
+
+Above to right using case?
+
+Instantiate Games => set counter to 0, checks if games = 10 to freeze board, show pop up with results, buttons to restart game?
+
+Instantiate single Game => player/cpu => who has got o/x ? anything else?
+
+Shall i use Game(), Games(), prototype for methods?
+
+Leave master branch empty -> switch to ver1 branch 'quick&dirty', later create other branched ver2, ver3 etc until happy with result, switch to master and merge to master final one
+Create i.e. ver6-tdd branch and create final version using Jasmine TDD
+
+Look at bowling TDD to see the structure for Jasmine TDD and structure 
+
+refactor code to use one of the JS patterns 'design pattern' ? init(), start() etc.
+
+Finally apply graphical UI grid in native JS - recycle battleship project
 
 */
