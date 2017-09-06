@@ -116,5 +116,24 @@ refactor code to use one of the JS patterns 'design pattern' ? init(), start() e
 
 Finally apply graphical UI grid in native JS - recycle battleship project
 
-Good luck!
+Separate function to check wheter that is the end of the game or not, run at the begging of move function ??
+function move(...){
+gameAlive();
+....
+}
+
+function gameAlive() {
+    if(board.indexOf(false) < 0) { console.log('replace console.log with some function to show GAME OVER') };
+    return;     
+}
+
+// Comments for the above
+
+// Array when initialised => An example how it will look like after 2 moves
+// [false, false, false]   => ['o', false, false]
+// [false, false, false]      [false, 'x', false]
+// [false, false, false]      [false, false, false]
+
+when game is finished there should be no FALSEs
+say array name is board...
 */
