@@ -116,4 +116,5 @@ refactor code to use one of the JS patterns 'design pattern' ? init(), start() e
 
 Finally apply graphical UI grid in native JS - recycle battleship project
 
+Good luck!
 */
